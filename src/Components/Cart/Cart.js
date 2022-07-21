@@ -1,11 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import classes from "./Cart.module.css";
 import Modal from "../UI/Modal";
 import CartItem from "./CartItem";
 import CartContext from "../../Store/cart-context";
+import CartForm from "./CartForm";
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
-
+  const [isFormShown, setIsFormShown] = useState(false);
   const totalAmount = `$${Math.abs(cartCtx.totalAmount.toFixed(2))}`;
   const cartItemAddHandler = (item) => {
     cartCtx.addItem({ ...item, amount: 1 });
@@ -30,6 +31,9 @@ const Cart = (props) => {
       })}
     </ul>
   );
+  const togleForm = () => {
+    setIsFormShown((prev) => !prev);
+  };
 
   return (
     <Modal onHideCart={props.onHideCart}>
@@ -38,14 +42,19 @@ const Cart = (props) => {
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
-      <div className={classes.actions}>
-        <button onClick={props.onHideCart} className={classes["button--alt"]}>
-          Close
-        </button>
-        {!!cartCtx.items.length && (
-          <button className={classes.button}>Order</button>
-        )}
-      </div>
+      {!isFormShown && (
+        <div className={classes.actions}>
+          <button onClick={props.onHideCart} className={classes["button--alt"]}>
+            Close
+          </button>
+          {!!cartCtx.items.length && (
+            <button onClick={togleForm} className={classes.button}>
+              Order
+            </button>
+          )}
+        </div>
+      )}
+      {isFormShown && <CartForm onCancel={togleForm} />}
     </Modal>
   );
 };

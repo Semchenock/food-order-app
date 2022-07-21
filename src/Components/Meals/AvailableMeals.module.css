@@ -10,6 +10,10 @@
   margin: 0;
   padding: 0;
 }
+.logger {
+  margin: 40px 0px;
+  text-align: center;
+}
 
 @keyframes meals-appear {
   from {

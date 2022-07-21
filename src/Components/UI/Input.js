@@ -1,7 +1,6 @@
 import classes from "./Input.module.css";
 const Input = (props) => {
   const updateHandler = (event) => {
-    console.log(+event.target.value);
     props.onUpdateAmount(+event.target.value);
   };
   return (
