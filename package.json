@@ -1,8 +1,8 @@
 {
   "name": "food-order-app",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://github.com/Semchenock/food-order-app/",
+  "private": false,
+  "homepage": "https://github.com/Semchenock/food-order-app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
