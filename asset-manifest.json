@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Semchenock/food-order-app/static/css/main.d0ebb9cf.css",
+    "main.js": "/Semchenock/food-order-app/static/js/main.a083a00e.js",
+    "static/media/meals.jpg": "/Semchenock/food-order-app/static/media/meals.5b89c31a0a25a21498c7.jpg",
+    "index.html": "/Semchenock/food-order-app/index.html",
+    "main.d0ebb9cf.css.map": "/Semchenock/food-order-app/static/css/main.d0ebb9cf.css.map",
+    "main.a083a00e.js.map": "/Semchenock/food-order-app/static/js/main.a083a00e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0ebb9cf.css",
+    "static/js/main.a083a00e.js"
+  ]
+}
