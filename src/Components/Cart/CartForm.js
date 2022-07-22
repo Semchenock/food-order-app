@@ -99,6 +99,7 @@ const CartForm = (props) => {
     event.preventDefault();
     postOrder();
     resetForm();
+    setFormIsValid(false);
   };
 
   const nameStyle = `${classes.control} ${nameHasError ? classes.invalid : ""}`;

@@ -57,3 +57,11 @@
     transform: scale(1);
   }
 }
+@media (max-width: 580px) {
+  .title {
+    display: none;
+  }
+  .button {
+    padding: 0.5rem 0.75rem;
+  }
+}
